@@ -267,7 +267,7 @@ export default class Drawar1 extends Component {
                           <TableCell align="left">
                             <VisibilityIcon />
                           </TableCell>
-                          <TableCell align="left">{list.To}</TableCell>
+                          <TableCell align="left">{list.From}</TableCell>
                           <TableCell align="left">{list.Subject}</TableCell>
 
                           <TableCell align="left">{list.Description}</TableCell>
