@@ -10,7 +10,7 @@ const passport = require("passport");
 //mongo
 mongoose
   .connect(
-    "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false",
+    "mongodb+srv://satheesh:S@theesh05@cluster0.3u7fp.mongodb.net/Mail?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useCreateIndex: true,
