@@ -90,7 +90,9 @@ export default class login extends Component {
       // }
     };
   }
-
+componentDidMount() {
+    localStorage.clear();
+  }
   render() {
     return (
       <Box style={styles.box}>
