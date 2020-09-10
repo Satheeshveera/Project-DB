@@ -41,8 +41,11 @@ export default class login extends Component {
               res.data[i].Password === this.state.Password
             ) {
               this.state.flag = true;
-              // alert("Login successfully...");
-              this.props.history.push("/home");
+              if (localStorage.getItem("userdetails") !== null) {
+                this.props.history.push("/home");
+              } else {
+                this.props.history.push("/");
+              }
             }
           }
           if (this.state.flag === false) {
