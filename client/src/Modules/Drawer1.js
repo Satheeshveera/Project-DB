@@ -131,6 +131,7 @@ export default class Drawar1 extends Component {
               button
               onClick={() => {
                 this.setState({ inbox: true, sendmails: false });
+this.componentDidMount();
               }}
             >
               <ListItemIcon>
@@ -142,6 +143,7 @@ export default class Drawar1 extends Component {
               button
               onClick={() => {
                 this.setState({ sendmails: true, inbox: false });
+this.componentDidMount();
               }}
             >
               <ListItemIcon>
