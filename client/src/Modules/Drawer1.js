@@ -59,6 +59,8 @@ export default class Drawar1 extends Component {
     axios.get("/compose").then((res) => {
       let inx = [];
       for (let i = 0; i < res.data.length; i++) {
+                if (localStorage.getItem("userdetails") !== null)
+
         if (
           JSON.parse(localStorage.getItem("userdetails"))[0].User_Id ===
           res.data[i].To
@@ -75,6 +77,8 @@ export default class Drawar1 extends Component {
     axios.get("/compose").then((res) => {
       let sends = [];
       for (let i = 0; i < res.data.length; i++) {
+                if (localStorage.getItem("userdetails") !== null)
+
         if (
           JSON.parse(localStorage.getItem("userdetails"))[0].User_Id ===
           res.data[i].From
