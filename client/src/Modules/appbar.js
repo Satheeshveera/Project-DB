@@ -126,9 +126,13 @@ export default function Appbar(props) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose} style={{ color: "blue" }}>
-        {JSON.parse(localStorage.getItem("userdetails"))[0].User_Id}
-      </MenuItem>
+      {localStorage.getItem("userdetails") !== null ? (
+        <MenuItem onClick={handleMenuClose} style={{ color: "blue" }}>
+          {JSON.parse(localStorage.getItem("userdetails"))[0].User_Id}
+        </MenuItem>
+      ) : (
+        props.props.history.push("/")
+      )}
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
       <div className={classes.logout}>
         <MenuItem onClick={Redirect}>Logout</MenuItem>
